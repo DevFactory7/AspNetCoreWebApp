@@ -1,0 +1,72 @@
+﻿@model WebApp.Models.Board
+
+@{
+    ViewData["Title"] = "상세보기";
+}
+
+<div class="wrapper-content">
+    
+        <div class="page-header">
+            <h2>@ViewData["Title"]</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label>제목 : </label>@Model.Title
+                    </div>
+                    <div class="panel-body">
+                            @Html.Raw(Model.Contents)
+                    </div>
+                    <div class="panel-footer">
+                        <div class="clearfix">
+                            <a asp-controller="Boards" asp-action="Index" class="btn btn-default">목록</a>
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary pull-right">수정</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+    
+
+</div>
+    @*<h2>Details</h2>
+    <div>
+        <h4>Board</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Contents)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Contents)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RegDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RegDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.WriterCode)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.WriterCode)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReadCount)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ReadCount)
+            </dd>
+        </dl>
+    </div>*@
+

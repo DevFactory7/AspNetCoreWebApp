@@ -1,0 +1,47 @@
+﻿@model WebApp.Models.RolesMgmtViewModels.RoleDetailsViewModel
+@{
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    ViewData["Title"] = "상세보기";
+}
+<div class="wrapper-content">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+    <div>
+        <h4>권한명 : @Model.Role.Name</h4>
+    </div>
+    
+    <hr />
+    <h4>소속 사용자 리스트 <small>(전체 : @(Model.Users.Count)명)</small></h4>
+    @if (@Model.Users.Count == 0)
+    {
+        <p>No users found in this role.</p>
+    }
+    <div class="table-responsive">
+        <table class="table table-striped table-hover dataTables-example">
+            <thead>
+                <tr>
+                    <th hidden></th>
+                    <th>아이디</th>
+                    <th>이메일</th>
+                    <th>닉네임</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.Users)
+            {
+                    <tr>
+                        <td hidden>@item.Id</td>
+                        <td data-title="아이디">@item.UserName</td>
+                        <td data-title="이메일">@item.Email</td>
+                        <td data-title="닉네임">@item.NickName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <a asp-action="Index" class="btn btn-default">뒤로가기</a>
+        <a asp-controller="ApplicationRole" asp-action="Edit" asp-route-id="@Model.Role.Id" class="btn btn-warning pull-right">수정</a>
+    </div>
+</div>

@@ -1,0 +1,289 @@
+﻿@import url("font-awesome/css/font-awesome.css");
+@import url("../lib/bootstrap/dist/css/bootstrap.css");
+@import url("datatables.min.css");
+@import url("bootstrap-dialog.min.css");
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+}
+.body-content img{
+    max-width:100%;
+}
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+.panel-body {
+    padding: 10px 20px;
+    line-height: 1.5em;
+    word-wrap: break-word;
+}
+.panel-body p{
+    width:100%;
+}
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*navbar-default*/
+.navbar-default {
+    background-color: white;
+    border-color: #e96209;
+}
+
+    .navbar-default .navbar-brand {
+        color: black;
+    }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #e96209;
+        }
+
+    .navbar-default .navbar-text {
+        color: black;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #333;
+        font-size:1.4em;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #e96209;
+            background-color: white;
+        }
+
+    .navbar-default .navbar-nav > li > .dropdown-menu {
+        background-color: white;
+        color: black;
+        font-size: 1.2em;
+    }
+
+        .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+            color: black;
+        }
+
+            .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+            .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+                color: #e96209;
+                background-color: white;
+            }
+
+        .navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+            background-color: #e96209;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #e96209;
+        background-color: white;
+    }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #e96209;
+        background-color: white;
+    }
+
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: #e96209;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: #e96209;
+    }
+
+
+        .navbar-default .navbar-toggle > .open {
+            background-color: #e96209;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #e96209;
+        }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #feffff;
+    }
+
+    .navbar-default .navbar-link {
+        color: black;
+    }
+
+        .navbar-default .navbar-link:hover {
+            color: black;
+        }
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #feffff;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #ffffff;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #64a6d9;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #000;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #e96209;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #000;
+        background-color: #64a6d9;
+    }
+    .navbar-nav ul {
+        border-top: 1px solid #e5e5e5;
+        padding: 10px 0;
+    }
+
+        .navbar-nav ul > li {
+            border-top: 0px solid #e5e5e5;
+        }
+
+            .navbar-nav ul > li > a {
+                padding: 5px 15px 10px 50px;
+                line-height: 30px;
+                font-size: 15px;
+                
+            }
+
+    .navbar-nav > li > ul {
+        border-radius: 0;
+        opacity: 1 !important;
+        position: relative !important;
+        clear: both !important;
+        float: none;
+    }
+    /*li.dropdown-menu {
+        display: none !important;
+    }*/
+    /*.dropdown-menu {
+        display: none !important;
+    }*/
+    .navbar-brand-name {
+        display: block !important;
+    }
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    font-size: 30px;
+    line-height: 25px;
+}
+
+.navbar-brand-logo {
+    height: 50px;
+    max-width: 50px;
+    margin-top: -4px;
+}
+
+.navbar-brand-name {
+    display: none;
+}
+
+
+.navbar-brand-logo {
+    height: 40px;
+    max-width: 45px;
+    margin-top: -9px;
+}
+
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-caret{
+    display:none;
+}
+
+#navbar-close {
+    color: #fff;
+    width: 22px;
+    height: 19px;
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+/* 모바일 화면일때 토글버튼 눌렸을때 색상 */
+.navbar-toggle-clicked {
+    background-color: #e96209;
+}
+
+.wrapper-content {
+    overflow: hidden;
+    padding-top: 0px;
+}
+
+
+.pT10 {
+    padding-top: 10px
+}
+
+.pT20 {
+    padding-top: 10px
+}
+
+.pT30 {
+    padding-top: 10px
+}
+
+.pT40 {
+    padding-top: 40px
+}
+
+.pT50 {
+    padding-top: 50px
+}
+
+.pT60 {
+    padding-top: 60px
+}

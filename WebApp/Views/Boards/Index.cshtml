@@ -1,0 +1,86 @@
+﻿@model IEnumerable<WebApp.Models.Board>
+@{
+    ViewData["Title"] = "게시판";
+}
+
+<h2>@ViewData["Title"]</h2>
+<div class="wrapper-content">
+    <div class="pt30">
+        <div class="table-responsive">
+            <table id="dev-datatable" class="table table-striped table-hover">
+                <colgroup>
+                    <col hidden />
+                    <col />
+                    <col width="110px" />
+                    <col width="110px" />
+                    <col width="110px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th hidden>@Html.DisplayName("Id")</th>
+                        <th>@Html.DisplayNameFor(model => model.Title)</th>
+                        <th>@Html.DisplayNameFor(model => model.RegDate)</th>
+                        <th>@Html.DisplayName("작성자")</th>
+                        <th>@Html.DisplayNameFor(model => model.ReadCount)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td hidden>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @if (item.IsNotice)
+                                {
+                                    <b>[공지]</b>@item.Title
+                                }
+                                else
+                                {
+                                    @item.Title
+
+                                }
+                            </td>
+                            <td>
+                                @item.RegDate.ToShortDateString()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Writer.NickName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReadCount)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                <a asp-action="Create" class="btn btn-primary">작성</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{ 
+    <script type="text/javascript" src="~/js/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dev-datatable').dataTable({
+                "order": [[2, "desc"]],
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+            });
+        });
+        //목록에서 선택시 글번호를 가지고 Board 컨트롤러의 Details Action 메서드 호출
+        $('tr').has('td').on('click', function () {
+
+            if ($(this).children('td').first().text() != "No data available in table") {
+                location.href = "/Boards/Details/" + $(this).children('td').first().text().trim();
+            }
+
+        });
+
+        //마우스 커서변경
+        $('tr').has('td').css('cursor', 'pointer');
+    </script>
+}

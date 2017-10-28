@@ -1,0 +1,36 @@
+﻿@model WebApp.Models.Board
+
+@{
+    ViewData["Title"] = "수정";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(model => model.WriterCode)
+            @Html.HiddenFor(model => model.RegDate)
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contents" class="control-label"></label>
+                <textarea asp-for="Contents" name="Contents" class="form-control editor" rows="30" placeholder="내용 입력"></textarea>
+                <span asp-validation-for="Contents" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-default pull-left">목록</a>
+                <input type="submit" value="저장" class="btn btn-primary pull-right" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

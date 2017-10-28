@@ -1,0 +1,17 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jquery-validation": "1.17.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "trumbowyg": "v2.8.1",
+    "font-awesome": "fontawesome#v4.7.0",
+    "datatables": "DataTables#1.10.16"
+  },
+  "resolutions": {
+    "jquery": "3.2.1",
+    "trumbowyg": "v2.8.1",
+    "jquery-validation": "1.17.0"
+  }
+}

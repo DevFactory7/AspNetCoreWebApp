@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Common", "WebApp.Common\WebApp.Common.csproj", "{2C5156AD-63E6-489C-B8B9-1FBB614A59CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Data", "WebApp.Data\WebApp.Data.csproj", "{41945B08-2939-486D-A988-0E6F12A9061D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{7A0EF772-38E3-4DD2-8FFF-4B0A941BDFD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C5156AD-63E6-489C-B8B9-1FBB614A59CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5156AD-63E6-489C-B8B9-1FBB614A59CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5156AD-63E6-489C-B8B9-1FBB614A59CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5156AD-63E6-489C-B8B9-1FBB614A59CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41945B08-2939-486D-A988-0E6F12A9061D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41945B08-2939-486D-A988-0E6F12A9061D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41945B08-2939-486D-A988-0E6F12A9061D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41945B08-2939-486D-A988-0E6F12A9061D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0EF772-38E3-4DD2-8FFF-4B0A941BDFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0EF772-38E3-4DD2-8FFF-4B0A941BDFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0EF772-38E3-4DD2-8FFF-4B0A941BDFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0EF772-38E3-4DD2-8FFF-4B0A941BDFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB95EEDB-649A-403D-B0D9-FE768B5AF0A7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jstudy.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebApp.Common\\WebApp.Common.csproj
+		SccProjectName1 = WebApp.Common
+		SccLocalPath1 = WebApp.Common
+		SccProjectUniqueName2 = WebApp.Data\\WebApp.Data.csproj
+		SccProjectName2 = WebApp.Data
+		SccLocalPath2 = WebApp.Data
+		SccProjectUniqueName3 = WebApp\\WebApp.csproj
+		SccProjectName3 = WebApp
+		SccLocalPath3 = WebApp
+	EndGlobalSection
+EndGlobal
