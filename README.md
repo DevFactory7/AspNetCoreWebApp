@@ -1,1 +1,2 @@
 # AspNetCoreWebApp
+Naver, Kakao ExternalLogins
