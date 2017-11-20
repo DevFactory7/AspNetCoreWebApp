@@ -37,6 +37,19 @@ namespace Core
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+
+            services.AddAuthentication()
+                .AddNaver(naverOptions =>
+                {
+                    naverOptions.ClientId = Configuration["Naver:ClientId"];                            //appsettings.json Naver:ClientId
+                    naverOptions.ClientSecret = Configuration["Naver:ClientSecret"];                    //appsettings.json Naver:ClientSecret
+                })
+                .AddKakao(kakaoOptions =>
+                {
+                    kakaoOptions.ClientId = Configuration["Kakao:ClientId"];                            //appsettings.json Kakao:ClientId
+                    kakaoOptions.ClientSecret = Configuration["Kakao:ClientSecret"];                    //appsettings.json Kakao:ClientSecret
+                })
+                ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
